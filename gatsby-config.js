@@ -1,9 +1,11 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
+  plugins: [
+    {
+      resolve: `gatsby-source-drupal`,
+      options: {
+        baseUrl: `http://sprint-20191213-1143.ddev.site:8080/`,
+        apiBase: `jsonapi`,
+      },
+    },
+  ],
 }
